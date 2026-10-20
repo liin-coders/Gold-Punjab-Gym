@@ -49,7 +49,7 @@ function brandUpdate(){
   const scrolled=-brandSection.getBoundingClientRect().top;
   const lead=vh*.2,unit=vh*.7;
   let state=0;
-  if(scrolled>=lead)state=Math.min(7,1+Math.floor((scrolled-lead)/unit));
+  if(scrolled>=lead)state=Math.min(6,1+Math.floor((scrolled-lead)/unit));
   if(brandSection.dataset.state!==String(state))brandSection.dataset.state=state;
 }
 function brandRequest(){if(!brandTicking){brandTicking=true;requestAnimationFrame(brandUpdate)}}
